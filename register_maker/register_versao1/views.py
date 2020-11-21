@@ -4,7 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("<em>My App </em>")
+    my_dict = {'insert_me':"variável inserida pela função", 'insert_me2':123}
+    return render(request,'register_versao1/index.html',context=my_dict)
 
 
 def cadastro(request):
